@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "dev:api": "json-server --watch db.json --port 3000",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.9",
+    "@iconify/vue": "^5.0.0",
+    "@pinia/nuxt": "^0.11.1",
+    "@stripe/stripe-js": "^8.0.0",
+    "@tailwindcss/vite": "^4.1.12",
+    "@vee-validate/nuxt": "^4.15.1",
+    "@vee-validate/rules": "^4.15.1",
+    "@vee-validate/zod": "^4.15.1",
+    "@vue/apollo-composable": "^4.2.2",
+    "@vueuse/core": "^13.9.0",
+    "dayjs": "^1.11.13",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6",
+    "jwt-decode": "^4.0.0",
+    "nuxt": "^3.17.6",
+    "pinia": "^3.0.3",
+    "tailwindcss": "^4.1.12",
+    "vee-validate": "^4.15.1",
+    "vue": "^3.5.17",
+    "vue-apollo": "^3.1.2",
+    "vue-router": "^4.5.1",
+    "vue-stripe-js": "^2.0.2",
+    "vue-toastification": "^2.0.0-rc.5",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@iconify-json/ph": "^1.2.2",
+    "@nuxt/icon": "^1.15.0",
+    "@nuxtjs/apollo": "^5.0.0-alpha.15",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "json-server": "^1.0.0-beta.3"
+  }
+}
