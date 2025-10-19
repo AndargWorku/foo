@@ -48,7 +48,7 @@ export default defineNuxtConfig({
     hasuraAdminSecret: process.env.HASURA_ADMIN_SECRET,
     public: {
       hasuraGraphqlEndpoint: process.env.NUXT_PUBLIC_HASURA_GRAPHQL_ENDPOINT,
-      stripePublishableKey: process.env.NUXT_PUBLIC_Chapa_PUBLISHABLE_KEY,
+      chapaPublishableKey: process.env.NUXT_PUBLIC_Chapa_PUBLISHABLE_KEY,
     },
   },
 
