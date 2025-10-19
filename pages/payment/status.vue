@@ -18,19 +18,29 @@
       <p class="text-slate-600 mt-2">
         Your payment was not completed. Redirecting you back...
       </p>
+      <p v-if="errorMessage" class="text-red-500 mt-2 text-sm">
+        Details: {{ errorMessage }}
+      </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
+
 const route = useRoute();
 const router = useRouter();
 const status = ref<"success" | "failed">("failed");
-const recipeId = ref((route.query.recipe_id as string) || ""); // Assuming your webhook could pass this
+const recipeId = ref((route.query.recipe_id as string) || "");
+const errorMessage = ref((route.query.message as string) || ""); // Capture error message from URL
 
 onMounted(() => {
   if (route.query.status === "success") {
     status.value = "success";
+  } else {
+    // Default to failed if status is not 'success'
+    status.value = "failed";
   }
 
   // Redirect back to the recipe page after a short delay
@@ -38,6 +48,7 @@ onMounted(() => {
     if (recipeId.value) {
       router.push(`/recipe/${recipeId.value}`);
     } else {
+      // If recipe_id is not available, redirect to a general recipes list or home
       router.push("/recipes");
     }
   }, 3000);
