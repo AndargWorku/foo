@@ -30,7 +30,7 @@
             <button
               type="submit"
               :disabled="loadingAddComment || !newComment.trim()"
-              class="rounded-lg bg-green-600 px-6 py-2 font-semibold text-white shadow transition hover:bg-green-700 disabled:cursor-not-allowed disabled:bg-green-300"
+              class="rounded-lg bg-green-600 cursor-pointer px-6 py-2 font-semibold text-white shadow transition hover:bg-green-700 disabled:cursor-not-allowed disabled:bg-green-300"
             >
               <UiSpinner
                 v-if="loadingAddComment"

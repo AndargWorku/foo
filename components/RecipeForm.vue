@@ -78,7 +78,6 @@
       </div>
     </section>
 
-    <!-- Section 2: Optional Premium Recipe Details -->
     <section class="rounded-lg border border-slate-200 bg-slate-50 p-6">
       <h2 class="mb-2 text-xl font-bold text-slate-700">
         Premium Recipe (Optional)

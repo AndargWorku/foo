@@ -47,7 +47,13 @@ export interface Recipe {
   category?: Category;
   ingredients?: Ingredient[];
   steps?: Step[];
+   user_purchased_recipes_aggregate?: { // Added for premium access
+    aggregate: {
+      count: number;
+    };
+  };
 }
+
 
 
 

@@ -1,5 +1,4 @@
 
-
 // composables/useImageUpload.ts
 
 import { useMutation } from '@vue/apollo-composable';
@@ -13,7 +12,6 @@ const toBase64 = (file: File): Promise<string> =>
     reader.onerror = error => reject(error);
   });
 
-// Remove file extension (.jpg, .png, etc.)
 const getFileBaseName = (filename: string): string => {
   const dotIndex = filename.lastIndexOf('.');
   return dotIndex > 0 ? filename.substring(0, dotIndex) : filename;
@@ -26,7 +24,7 @@ export function useImageUpload() {
   const uploadImage = async (file: File): Promise<string> => {
     try {
       const imageDataBase64 = await toBase64(file);
-      const safeFilename = getFileBaseName(file.name); // ✅ no extension sent
+      const safeFilename = getFileBaseName(file.name); 
 
       const result = await uploadImageAction({
         imageDataBase64,

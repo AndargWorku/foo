@@ -45,7 +45,7 @@ import { useAuthStore } from "~/store/auth";
 import { navigateTo, useRoute } from "#app";
 
 const authStore = useAuthStore();
-// const router = useRouter(); // No longer needed here
+// const router = useRouter();
 const route = useRoute();
 const toast = useToast();
 const isLoading = ref(false);
@@ -67,11 +67,8 @@ async function onSubmit(values: any) {
 
     toast.success("Login successful! Welcome back.");
 
-    // Retrieve the redirect path from the query parameter
     const redirectPath = route.query.redirect?.toString();
 
-    // Perform the redirect. navigateTo handles server-side and client-side correctly.
-    // If no redirect is specified, go to the homepage.
     await navigateTo(redirectPath || "/", { replace: true });
   } catch (err: any) {
     toast.error(err.message || "An unexpected error occurred.");
