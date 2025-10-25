@@ -41,11 +41,9 @@ import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
 import { useToast } from "vue-toastification";
 import { useAuthStore } from "~/store/auth";
-// Import navigateTo and useRoute from #app for Nuxt 3
 import { navigateTo, useRoute } from "#app";
 
 const authStore = useAuthStore();
-// const router = useRouter();
 const route = useRoute();
 const toast = useToast();
 const isLoading = ref(false);
