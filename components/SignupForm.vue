@@ -63,10 +63,8 @@ import { ref } from "vue";
 import { Form, Field } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
-// import { useToast } from "vue-toastification";
+import { useToast } from "vue-toastification";
 import { useAuthStore } from "~/store/auth";
-import pkg from "vue-toastification";
-const { useToast } = pkg;
 
 const authStore = useAuthStore();
 const router = useRouter();

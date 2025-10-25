@@ -205,7 +205,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 import { useQuery, useMutation } from "@vue/apollo-composable";
-// import { useToast } from "vue-toastification";
+import { useToast } from "vue-toastification";
 import { useAuthStore } from "~/store/auth";
 import { useAuthAction } from "~/composables/useAuthAction";
 import {
@@ -216,8 +216,7 @@ import {
   UNBOOKMARK_RECIPE,
   INITIATE_PAYMENT,
 } from "~/lib/graphql";
-import pkg from "vue-toastification";
-const { useToast } = pkg;
+
 const route = useRoute();
 const router = useRouter();
 const auth = useAuthStore();

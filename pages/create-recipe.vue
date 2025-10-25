@@ -32,15 +32,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useMutation } from "@vue/apollo-composable";
-// import { useToast } from "vue-toastification";
+import { useToast } from "vue-toastification";
 import { useImageUpload } from "~/composables/useImageUpload";
 import {
   CREATE_RECIPE,
   FIND_OR_CREATE_CATEGORY,
   FIND_OR_CREATE_INGREDIENT,
 } from "~/lib/graphql";
-import pkg from "vue-toastification";
-const { useToast } = pkg;
+
 definePageMeta({ middleware: "auth" });
 
 const router = useRouter();

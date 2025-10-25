@@ -28,9 +28,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
-// import { useToast } from "vue-toastification";
-import pkg from "vue-toastification";
-const { useToast } = pkg;
+import { useToast } from "vue-toastification";
+
 definePageMeta({ layout: "blank" });
 
 const route = useRoute();
