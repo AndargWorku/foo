@@ -39,10 +39,11 @@ import { ref } from "vue";
 import { Form, Field } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
-import { useToast } from "vue-toastification";
+// import { useToast } from "vue-toastification";
 import { useAuthStore } from "~/store/auth";
 import { navigateTo, useRoute } from "#app";
-
+import Toast from "vue-toastification";
+const { useToast } = Toast;
 const authStore = useAuthStore();
 const route = useRoute();
 const toast = useToast();

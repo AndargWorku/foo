@@ -81,8 +81,9 @@ onMounted(() => {
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { useToast } from "vue-toastification";
-
+// import { useToast } from "vue-toastification";
+import Toast from "vue-toastification";
+const { useToast } = Toast;
 const route = useRoute();
 const router = useRouter();
 const toast = useToast();

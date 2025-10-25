@@ -64,10 +64,11 @@
 <script setup lang="ts">
 import { useAuthStore } from "~/store/auth";
 import { useMutation } from "@vue/apollo-composable";
-import { useToast } from "vue-toastification"; // ADDED
+// import { useToast } from "vue-toastification"; // ADDED
 import { useAuthAction } from "~/composables/useAuthAction"; // ADDED
 import { RATE_RECIPE } from "~/lib/graphql";
-
+import Toast from "vue-toastification";
+const { useToast } = Toast;
 const props = defineProps<{
   recipeId: string;
   initialUserRating: number;
