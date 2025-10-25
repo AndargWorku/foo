@@ -1,9 +1,8 @@
 <!-- pages/payment/status.vue -->
-<template>
+<!-- <template>
   <div
     class="flex min-h-screen flex-col items-center justify-center bg-slate-50 p-4 text-center"
   >
-    <!-- Success State -->
     <div class="max-w-md">
       <Icon
         name="ph:check-circle-bold"
@@ -18,7 +17,6 @@
       </p>
     </div>
 
-    <!-- Loading Spinner -->
     <div class="mt-8">
       <UiSpinner />
     </div>
@@ -38,17 +36,14 @@ const toast = useToast();
 
 const recipeId = ref((route.query.recipe_id as string) || "");
 
-// --- Main Logic ---
 onMounted(() => {
-  toast.success("Your payment was successful!"); // SUCCESS TOAST
+  toast.success("Your payment was successful!"); 
 
-  // 2. Redirect the user back to the recipe page after a delay.
   setTimeout(() => {
     if (recipeId.value) {
       const redirectPath = `/recipe/${recipeId.value}?purchase_success=true`;
       router.push(redirectPath);
     } else {
-      // Fallback if the recipe_id is somehow lost
       toast.warning(
         "Could not find the recipe you were on. Taking you to the home page."
       );
@@ -56,9 +51,9 @@ onMounted(() => {
     }
   }, 400);
 });
-</script>
+</script> -->
 
-<!-- <template>
+<template>
   <div
     class="flex flex-col items-center justify-center text-center py-20 min-h-screen bg-slate-50"
   >
@@ -115,4 +110,5 @@ onMounted(() => {
     }
   }, 4000);
 });
-</script> -->
+</script>
+-->
