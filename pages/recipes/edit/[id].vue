@@ -59,7 +59,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useQuery, useMutation } from "@vue/apollo-composable";
-import { useToast } from "vue-toastification"; // 1. Import useToast
+// import { useToast } from "vue-toastification"; // 1. Import useToast
 import { useImageUpload } from "~/composables/useImageUpload";
 import {
   GET_RECIPE_DETAILS,
@@ -69,7 +69,8 @@ import {
 } from "~/lib/graphql";
 import { useAuthStore } from "~/store/auth";
 import type { RecipeDetail } from "~/types";
-
+import pkg from "vue-toastification";
+const { useToast } = pkg;
 definePageMeta({ middleware: "auth" });
 
 const route = useRoute();
@@ -233,4 +234,3 @@ async function handleUpdate({
   }
 }
 </script>
-

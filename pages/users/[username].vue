@@ -300,7 +300,7 @@
 import { computed, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useQuery, useMutation } from "@vue/apollo-composable";
-import { useToast } from "vue-toastification";
+// import { useToast } from "vue-toastification";
 import { useAuthStore } from "~/store/auth";
 
 import {
@@ -308,6 +308,8 @@ import {
   GET_USER_UNIQUE_CATEGORIES,
   DELETE_RECIPE,
 } from "~/lib/graphql";
+import pkg from "vue-toastification";
+const { useToast } = pkg;
 
 definePageMeta({
   middleware: ["auth"],

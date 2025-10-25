@@ -84,12 +84,13 @@
 import { computed, ref } from "vue";
 import { useAuthStore } from "~/store/auth";
 import { useQuery, useMutation } from "@vue/apollo-composable";
-import { useToast } from "vue-toastification"; // 1. Import useToast
+// import { useToast } from "vue-toastification"; // 1. Import useToast
 import { GET_MY_PROFILE_FOR_EDIT, UPDATE_USER_PROFILE } from "~/lib/graphql";
 import { Form as VeeForm, Field } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
-
+import pkg from "vue-toastification";
+const { useToast } = pkg;
 definePageMeta({ middleware: "auth" });
 useSeoMeta({ title: "Edit Your Profile | BiteSized Recipes" });
 
