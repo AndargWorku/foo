@@ -114,12 +114,11 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useQuery, useMutation } from "@vue/apollo-composable";
-// import { useToast } from "vue-toastification";
+import { useToast } from "vue-toastification";
 import { useAuthStore } from "~/store/auth";
 import { GET_RECIPE_COMMENTS, ADD_COMMENT } from "~/lib/graphql";
 import type { Comments } from "~/types/recipe";
-import Toast from "vue-toastification";
-const { useToast } = Toast;
+
 const props = defineProps<{
   recipeId: string;
   totalComments: number;

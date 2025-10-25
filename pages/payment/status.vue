@@ -1,5 +1,5 @@
 <!-- pages/payment/status.vue -->
-<!-- <template>
+<template>
   <div
     class="flex min-h-screen flex-col items-center justify-center bg-slate-50 p-4 text-center"
   >
@@ -37,7 +37,7 @@ const toast = useToast();
 const recipeId = ref((route.query.recipe_id as string) || "");
 
 onMounted(() => {
-  toast.success("Your payment was successful!"); 
+  toast.success("Your payment was successful!");
 
   setTimeout(() => {
     if (recipeId.value) {
@@ -51,9 +51,9 @@ onMounted(() => {
     }
   }, 400);
 });
-</script> -->
+</script>
 
-<template>
+<!-- <template>
   <div
     class="flex flex-col items-center justify-center text-center py-20 min-h-screen bg-slate-50"
   >
@@ -81,9 +81,8 @@ onMounted(() => {
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
-// import { useToast } from "vue-toastification";
-import Toast from "vue-toastification";
-const { useToast } = Toast;
+import { useToast } from "vue-toastification";
+
 const route = useRoute();
 const router = useRouter();
 const toast = useToast();
@@ -112,4 +111,5 @@ onMounted(() => {
   }, 4000);
 });
 </script>
+-->
 -->

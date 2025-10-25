@@ -1,11 +1,10 @@
 
 // composables/useAuthAction.ts
 import { useAuthStore } from '~/store/auth'
-// import { useToast } from 'vue-toastification'
+import { useToast } from 'vue-toastification'
 
 import { useRoute, navigateTo } from '#app'
-import Toast from "vue-toastification";
-const { useToast } = Toast;
+
 
 export function useAuthAction() {
   const auth = useAuthStore()
