@@ -1,13 +1,11 @@
 
-// plugins/toast.client.ts
 import { defineNuxtPlugin } from '#app'
 import ToastPkg from 'vue-toastification'
 import 'vue-toastification/dist/index.css'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  // Handle CommonJS import correctly
   const Toast = ToastPkg.default || ToastPkg
-  const POSITION = Toast.POSITION || { TOP_RIGHT: 'top-right' }
+  const { POSITION, useToast } = Toast
 
   const options = {
     position: POSITION.TOP_RIGHT,
@@ -28,7 +26,13 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   nuxtApp.vueApp.use(Toast, options)
+
+  // Optional: register `useToast` globally
+  nuxtApp.provide('toast', useToast)
 })
+
+
+
 
 // // plugins/toast.ts
 // import { defineNuxtPlugin } from '#app'
